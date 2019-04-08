@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2E8B57;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="844.0" style="-fx-background-color: #006400;" text="Prueba de Aleatoridad" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnRegresar" prefHeight="39.0" prefWidth="39.0" ripplerFill="SLATEBLUE" text="&lt;-" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCerrar" layoutX="805.0" prefHeight="21.0" prefWidth="39.0" ripplerFill="RED" style="-fx-background-color: #ff0000cc;" text="X" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="172.0" layoutY="50.0" prefHeight="47.0" prefWidth="481.0" text="Da clic sobre la distribucion uniforme continua que desee" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPromedios" layoutX="62.0" layoutY="97.0" prefHeight="47.0" prefWidth="221.0" style="-fx-background-color: #006400;" text="Promedios" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnChiCuadrada" layoutX="302.0" layoutY="97.0" prefHeight="47.0" prefWidth="221.0" style="-fx-background-color: #006400;" text="Chi Cuadrada" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnKolmogorov" layoutX="543.0" layoutY="97.0" prefHeight="47.0" prefWidth="221.0" style="-fx-background-color: #006400;" text="Kolmogorov" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="172.0" layoutY="200.0" prefHeight="47.0" prefWidth="481.0" text="Seleccione una opcion para determinar la independencia estadistica" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAutocorrelacion" layoutX="157.0" layoutY="253.0" prefHeight="47.0" prefWidth="221.0" style="-fx-background-color: #006400;" text="Prueba de Autocorrelacion" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnHuecos" layoutX="422.0" layoutY="253.0" prefHeight="47.0" prefWidth="221.0" style="-fx-background-color: #006400;" text="Huecos" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCorridas" layoutX="157.0" layoutY="311.0" prefHeight="47.0" prefWidth="221.0" style="-fx-background-color: #006400;" text="Arriba/Debajo de la Media" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPoker" layoutX="422.0" layoutY="311.0" prefHeight="47.0" prefWidth="221.0" style="-fx-background-color: #006400;" text="Poker" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

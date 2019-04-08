@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="625.0" prefWidth="844.0" style="-fx-background-color: #6A5ACD;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="844.0" style="-fx-background-color: #483D8B;" text="Modelos Para la Generacion de Numeros Pseudoaleatorios" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="btnRegresar" prefHeight="39.0" prefWidth="39.0" ripplerFill="SLATEBLUE" text="&lt;-" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCerrar" layoutX="805.0" prefHeight="21.0" prefWidth="39.0" ripplerFill="RED" style="-fx-background-color: #ff0000cc;" text="X" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="14.0" layoutY="50.0" prefHeight="20.0" prefWidth="248.0" text="Elije un modelo dando clic en alguno" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnVonNeumann" layoutX="14.0" layoutY="78.0" prefHeight="39.0" prefWidth="248.0" style="-fx-background-color: #483D8B;" text="Modelo de Von Neumann" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnProdCentral" layoutX="14.0" layoutY="127.0" prefHeight="39.0" prefWidth="248.0" style="-fx-background-color: #483D8B;" text="Producto Central" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnFactConstante" layoutX="15.0" layoutY="175.0" prefHeight="39.0" prefWidth="248.0" style="-fx-background-color: #483D8B;" text="Factor Constante" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAditivo" layoutX="15.0" layoutY="224.0" prefHeight="39.0" prefWidth="248.0" style="-fx-background-color: #483D8B;" text="Aditivo" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnMultiplicativo" layoutX="14.0" layoutY="273.0" prefHeight="39.0" prefWidth="248.0" style="-fx-background-color: #483D8B;" text="Multiplicativo" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnMixto" layoutX="14.0" layoutY="322.0" prefHeight="39.0" prefWidth="248.0" style="-fx-background-color: #483D8B;" text="Mixto" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnPruebas" layoutX="15.0" layoutY="575.0" prefHeight="39.0" prefWidth="248.0" style="-fx-background-color: #483D8B;" text="Pruebas" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAyuda" layoutX="15.0" layoutY="524.0" prefHeight="39.0" prefWidth="248.0" style="-fx-background-color: #483D8B;" text="Ayuda" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="textSemilla" alignment="CENTER" labelFloat="true" layoutX="282.0" layoutY="63.0" prefHeight="30.0" prefWidth="175.0" promptText="Semilla" unFocusColor="WHITE">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textNumeAleatorio" alignment="CENTER" labelFloat="true" layoutX="469.0" layoutY="63.0" prefHeight="30.0" prefWidth="175.0" promptText="Numero Aleatorio" unFocusColor="WHITE">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textReferencia" alignment="CENTER" labelFloat="true" layoutX="658.0" layoutY="63.0" prefHeight="30.0" prefWidth="175.0" promptText="Referencia" unFocusColor="WHITE">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textModulo" alignment="CENTER" labelFloat="true" layoutX="282.0" layoutY="117.0" prefHeight="30.0" prefWidth="175.0" promptText="Modulo" unFocusColor="WHITE">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textMultiplicador" alignment="CENTER" labelFloat="true" layoutX="470.0" layoutY="117.0" prefHeight="30.0" prefWidth="175.0" promptText="Multiplicador" unFocusColor="WHITE">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="textConsAditiva" alignment="CENTER" labelFloat="true" layoutX="658.0" layoutY="117.0" prefHeight="30.0" prefWidth="175.0" promptText="Constante Aditiva" unFocusColor="WHITE">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnGenerar" layoutX="431.0" layoutY="166.0" prefHeight="39.0" prefWidth="248.0" style="-fx-background-color: #483D8B;" text="Generar" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tbNumePseudoaleatorios" layoutX="279.0" layoutY="211.0" prefHeight="403.0" prefWidth="554.0">
+        <columns>
+          <TableColumn fx:id="clmNumePseudoaleatorios" prefWidth="553.0" style="-fx-alignment: CENTER;" text="Numeros Pseudoaleatorios" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
