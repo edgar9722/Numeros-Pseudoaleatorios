@@ -76,7 +76,7 @@ public class VentanaModelos extends javax.swing.JFrame {
         }
     }
     
-    private void registrar (int num, int modulo, int numerosemillas){
+    private void registrar (int num, int numerosemillas){
         pseudo=new int[num];
         for (int i = 0; i < numerosemillas; i++){
             pseudo[i] = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor de la semilla X"+(i+1)));
@@ -498,7 +498,7 @@ public class VentanaModelos extends javax.swing.JFrame {
             int modulo = Integer.parseInt(JOptionPane.showInputDialog("Ingresa el valor del módulo"));
             int numerosemillas = Integer.parseInt(JOptionPane.showInputDialog("¿Con cuántas semillas quieres realizar el cálculo?"));
 
-            registrar(num, modulo, numerosemillas);
+            registrar(num, numerosemillas);
             calcular(num, modulo, numerosemillas);
 
             for (int i = 0; i < pseudo.length; i++) {
@@ -595,7 +595,6 @@ public class VentanaModelos extends javax.swing.JFrame {
                     + "         El multiplicador sea un numero mayor a 0.\n"
                     + "         La constante aditivia sea un numero mayor a 0.\n"
                     + "         El modulo sea mayor a la semilla y al multiplicador.\n\n"
-        
         );
     }//GEN-LAST:event_btnAyudaActionPerformed
 
