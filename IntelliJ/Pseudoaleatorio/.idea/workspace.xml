@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/META-INF/Pseudoaleatorio.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Controllers/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Controllers/menuAleatoriasController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Controllers/menuPrincipalController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Controllers/ventanaMixtoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Controllers/ventanaModelosController$1Proceso.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Controllers/ventanaModelosController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Controllers/ventanaPruebasController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Modelos/NumePseudoaleatorios.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Modelos/Pruebas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Modelos/Semilla.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Pseudoaleatorio/sample/Modelos/TablaChi2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controllers/ventanaModelosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controllers/ventanaModelosController.java" afterDir="false" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -63,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="357">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+            <state relative-caret-position="272">
+              <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controllers/menuAleatoriasController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="153">
               <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -99,7 +117,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controllers/menuPrincipalController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
+            <state relative-caret-position="255">
               <caret line="23" column="94" selection-start-line="22" selection-start-column="12" selection-end-line="23" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -111,8 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ventanaMixtoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="117" column="49" lean-forward="true" selection-start-line="110" selection-start-column="16" selection-end-line="117" selection-end-column="49" />
+            <state relative-caret-position="1683">
+              <caret line="117" column="49" selection-start-line="110" selection-start-column="16" selection-end-line="117" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,18 +141,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ventanaModelosController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="262" column="59" selection-start-line="262" selection-start-column="59" selection-end-line="262" selection-end-column="59" />
+            <state relative-caret-position="34">
+              <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2266#2920#0" />
-                <element signature="e#2959#3614#0" />
-                <element signature="e#3655#4310#0" />
-                <element signature="e#4345#6846#0" />
-                <element signature="e#6888#7542#0" />
-                <element signature="e#7575#8228#0" />
-                <element signature="e#8261#9830#0" />
-                <element signature="e#9865#10165#0" />
                 <element signature="method#modelos#0;class#ventanaModelosController#0" />
                 <element signature="method#guardarTabla#0;class#ventanaModelosController#0" />
                 <element signature="method#registrar#0;class#ventanaModelosController#0" />
@@ -142,8 +151,6 @@
                 <element signature="method#mostrar#0;class#ventanaModelosController#0" />
                 <element signature="method#llenarTabla#0;class#ventanaModelosController#0" />
                 <element signature="method#iniciar#0;class#ventanaModelosController#0" />
-                <element signature="e#37515#37516#0" expanded="true" />
-                <element signature="e#37548#37549#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,12 +159,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ventanaPruebasController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
+            <state relative-caret-position="748">
               <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2251#2252#0" expanded="true" />
-                <element signature="e#2273#2274#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,6 +182,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -210,6 +218,7 @@
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -218,6 +227,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,8 +272,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,10 +282,11 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Parcial 1/Pseudoaleatorios" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../../../Programacion/Archivos .jar/jfoenix-8.0.8.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -385,16 +395,18 @@
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1554617904372" duration="2331000" />
       <workItem from="1554656664421" duration="29486000" />
+      <workItem from="1554741456288" duration="112000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33119000" />
+    <option name="totallyTimeSpent" value="33231000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.28290468" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.28744328" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -414,7 +426,7 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32850242" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
       <window_info anchor="bottom" id="Terminal" order="16" />
@@ -493,13 +505,7 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Modelos/NumePseuProdCentral.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Modelos/NumePseuProdCentral.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/Modelos/NumePseudoaleatorios.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -556,10 +562,20 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="51" lean-forward="true" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+        <state relative-caret-position="272">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -568,7 +584,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/menuAleatoriasController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="153">
           <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -578,7 +594,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/menuPrincipalController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
+        <state relative-caret-position="255">
           <caret line="23" column="94" selection-start-line="22" selection-start-column="12" selection-end-line="23" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -588,18 +604,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ventanaMixtoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="117" column="49" lean-forward="true" selection-start-line="110" selection-start-column="16" selection-end-line="117" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="1683">
+          <caret line="117" column="49" selection-start-line="110" selection-start-column="16" selection-end-line="117" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -608,30 +614,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ventanaPruebasController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
+        <state relative-caret-position="748">
           <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2251#2252#0" expanded="true" />
-            <element signature="e#2273#2274#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ventanaModelosController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="262" column="59" selection-start-line="262" selection-start-column="59" selection-end-line="262" selection-end-column="59" />
+        <state relative-caret-position="34">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2266#2920#0" />
-            <element signature="e#2959#3614#0" />
-            <element signature="e#3655#4310#0" />
-            <element signature="e#4345#6846#0" />
-            <element signature="e#6888#7542#0" />
-            <element signature="e#7575#8228#0" />
-            <element signature="e#8261#9830#0" />
-            <element signature="e#9865#10165#0" />
             <element signature="method#modelos#0;class#ventanaModelosController#0" />
             <element signature="method#guardarTabla#0;class#ventanaModelosController#0" />
             <element signature="method#registrar#0;class#ventanaModelosController#0" />
@@ -639,8 +634,6 @@
             <element signature="method#mostrar#0;class#ventanaModelosController#0" />
             <element signature="method#llenarTabla#0;class#ventanaModelosController#0" />
             <element signature="method#iniciar#0;class#ventanaModelosController#0" />
-            <element signature="e#37515#37516#0" expanded="true" />
-            <element signature="e#37548#37549#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -701,7 +694,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
