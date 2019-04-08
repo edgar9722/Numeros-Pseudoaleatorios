@@ -22,8 +22,8 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         btnRegresar.setOnAction(event -> {
-            m.primaryStage.show();
-            ((Stage) (((Button) event.getSource()).getScene().getWindow())).hide();
+            Controller controller=new Controller();
+            m.abrirEscena(event,"sample.fxml", controller,"Menu numeros pseudoaleatorios");
         });
         btnCerrar.setOnAction(event -> {
             System.exit(0);

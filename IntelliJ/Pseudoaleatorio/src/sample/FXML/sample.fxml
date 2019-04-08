@@ -18,7 +18,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutY="65.0" prefHeight="38.0" prefWidth="693.0" text="Elige una de las siguientes opciones:" textFill="WHITE">
+            <Label alignment="CENTER" layoutY="65.0" prefHeight="38.0" prefWidth="693.0" text="Elije una de las siguientes opciones:" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
