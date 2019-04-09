@@ -5,12 +5,14 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="590.0" prefWidth="685.0" style="-fx-background-color: #9932CC;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="590.0" prefWidth="685.0" style="-fx-background-color: #9932CC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" prefHeight="39.0" prefWidth="685.0" style="-fx-background-color: #8B008B;" text="Distribuciones" textFill="WHITE">
          <font>
@@ -61,20 +63,36 @@
             <ToggleGroup fx:id="Grupos" />
          </toggleGroup>
       </JFXRadioButton>
-      <JFXRadioButton fx:id="rdComposicion" layoutX="343.0" layoutY="133.0" text="Composicion" textFill="WHITE">
+      <JFXRadioButton fx:id="rdComposicion" layoutX="343.0" layoutY="133.0" text="Composicion" textFill="WHITE" toggleGroup="$Grupos">
          <font>
             <Font size="14.0" />
          </font>
-         <toggleGroup>
-            <ToggleGroup fx:id="Grupos1" />
-         </toggleGroup>
       </JFXRadioButton>
-      <JFXTextField fx:id="textA" labelFloat="true" layoutX="178.0" layoutY="106.0" promptText="punto a " unFocusColor="#f5f5f5">
+      <JFXTextField fx:id="textA" alignment="CENTER" labelFloat="true" layoutX="176.0" layoutY="133.0" prefHeight="25.0" prefWidth="155.0" promptText="Punto a " unFocusColor="#f5f5f5">
          <effect>
-            <ColorAdjust />
+            <ColorAdjust brightness="1.0" />
          </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
       </JFXTextField>
-      <JFXTextField />
-      <JFXTextField fx:id="textB" layoutX="178.0" layoutY="167.0" promptText="punto b" />
+      <JFXTextField fx:id="textB" alignment="CENTER" labelFloat="true" layoutX="176.0" layoutY="194.0" prefHeight="25.0" prefWidth="155.0" promptText="Punto b" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnGenerarU" layoutX="210.0" layoutY="238.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #000000;" text="Generar" textFill="WHITE" />
+      <Label fx:id="lblInversa" alignment="CENTER" layoutX="176.0" layoutY="93.0" prefHeight="25.0" prefWidth="155.0" text="Transformada inversa" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbNumerosX" layoutX="13.0" layoutY="275.0" prefHeight="303.0" prefWidth="659.0">
+        <columns>
+          <TableColumn fx:id="clmX" prefWidth="657.0" style="-fx-alignment: CENTER;" text="Xi" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
