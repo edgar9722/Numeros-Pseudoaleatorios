@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="590.0" prefWidth="685.0" style="-fx-background-color: #9932CC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="685.0" style="-fx-background-color: #8B008B;" text="Distribuciones" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnRegresar" prefHeight="39.0" prefWidth="39.0" ripplerFill="SLATEBLUE" text="&lt;-" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCerrar" layoutX="646.0" prefHeight="21.0" prefWidth="39.0" ripplerFill="RED" style="-fx-background-color: #ff0000cc;" text="X" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnExponencial" layoutX="13.0" layoutY="50.0" prefHeight="39.0" prefWidth="155.0" style="-fx-background-color: #8B008B;" text="Exponencial" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUniforme" layoutX="176.0" layoutY="50.0" prefHeight="39.0" prefWidth="155.0" style="-fx-background-color: #8B008B;" text="Uniforme" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTriangular" layoutX="341.0" layoutY="50.0" prefHeight="39.0" prefWidth="155.0" style="-fx-background-color: #8B008B;" text="Triangular" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnGamma" layoutX="504.0" layoutY="50.0" prefHeight="39.0" prefWidth="155.0" style="-fx-background-color: #8B008B;" text="Gamma" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXRadioButton fx:id="rdTransformada" layoutX="176.0" layoutY="97.0" text="Transformada inversa" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Grupos" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rdComposicion" layoutX="366.0" layoutY="97.0" text="Composicion" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Grupos1" />
+         </toggleGroup>
+      </JFXRadioButton>
+   </children>
+</AnchorPane>
