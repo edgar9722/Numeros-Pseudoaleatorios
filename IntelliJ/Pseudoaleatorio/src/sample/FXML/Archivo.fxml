@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="656.0" prefWidth="532.0" style="-fx-background-color: #FF69B4;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="533.0" style="-fx-background-color: #C71585;" text="Tomar numeros pseudoaleatorios de archivo Ri" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnRegresar" prefHeight="39.0" prefWidth="39.0" ripplerFill="SLATEBLUE" text="&lt;-" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCerrar" layoutX="494.0" prefHeight="21.0" prefWidth="39.0" ripplerFill="RED" style="-fx-background-color: #ff0000cc;" text="X" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXRadioButton fx:id="rdInicio" layoutX="20.0" layoutY="54.0" text="Inicio" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="Radio" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rdIntervalo" layoutX="20.0" layoutY="85.0" text="Intervalo" textFill="WHITE" toggleGroup="$Radio">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="rdFinal" layoutX="20.0" layoutY="118.0" text="Final" textFill="WHITE" toggleGroup="$Radio">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXRadioButton>
+      <TableView fx:id="tbNumeros" layoutX="10.0" layoutY="159.0" prefHeight="488.0" prefWidth="512.0">
+        <columns>
+          <TableColumn fx:id="clmNumePseudoaleatorios" prefWidth="492.0" style="-fx-alignment: CENTER;" text="Numeros pseudoaleatorios" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="textInicio" alignment="CENTER" focusColor="MEDIUMVIOLETRED" labelFloat="true" layoutX="166.0" layoutY="70.0" promptText="Inicio" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXTextField fx:id="textFin" alignment="CENTER" focusColor="MEDIUMVIOLETRED" labelFloat="true" layoutX="337.0" layoutY="70.0" promptText="Fin" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXButton fx:id="btnLeer" layoutX="166.0" layoutY="110.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #C71585;" text="Leer numeros" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblCantidad" alignment="CENTER_RIGHT" layoutX="460.0" layoutY="143.0" prefHeight="17.0" prefWidth="62.0" text="Cantidad" />
+   </children>
+</AnchorPane>

@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #6495ED;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" prefHeight="39.0" prefWidth="600.0" style="-fx-background-color: #4169E1;" text="Prueba de Aleatoridad" textFill="WHITE">
@@ -23,6 +22,22 @@
          </cursor>
       </JFXButton>
       <JFXButton fx:id="btnCerrar" layoutX="561.0" prefHeight="21.0" prefWidth="39.0" ripplerFill="RED" style="-fx-background-color: #ff0000cc;" text="X" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnArchivos" layoutX="58.0" layoutY="124.0" prefHeight="55.0" prefWidth="485.0" style="-fx-background-color: #4169E1;" text="Tomar Numeros pseudoaleatorios de Archivo Ri" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnManualmente" layoutX="58.0" layoutY="232.0" prefHeight="55.0" prefWidth="485.0" style="-fx-background-color: #4169E1;" text="Insertarlos manualmente" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

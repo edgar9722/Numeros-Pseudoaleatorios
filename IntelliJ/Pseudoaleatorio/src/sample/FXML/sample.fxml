@@ -13,7 +13,7 @@
    <children>
       <AnchorPane prefHeight="331.0" prefWidth="693.0" style="-fx-background-color: #DC143C;">
          <children>
-            <Label alignment="CENTER" prefHeight="39.0" prefWidth="693.0" style="-fx-background-color: #800000;" text="Prueba de Aleatoridad" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="39.0" prefWidth="693.0" style="-fx-background-color: #800000;" text="Modelos" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

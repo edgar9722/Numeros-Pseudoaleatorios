@@ -13,7 +13,8 @@ import java.util.ResourceBundle;
 public class menuAleatoriasController implements Initializable {
     @FXML JFXButton btnRegresar;
     @FXML JFXButton btnCerrar;
-
+    @FXML JFXButton btnArchivos;
+    @FXML JFXButton btnManualmente;
 
     Main main=new Main();
     @Override
@@ -25,6 +26,11 @@ public class menuAleatoriasController implements Initializable {
         btnCerrar.setOnAction(event -> {
             System.exit(0);
         });
-
+        btnArchivos.setOnAction(event -> {
+            ArchivoController archivoController=new ArchivoController();
+            main.abrirEscena(event, "Archivo.fxml", archivoController, "Leer Archivo");
+        });
+        btnManualmente.setOnAction(event -> {
+        });
     }
 }
