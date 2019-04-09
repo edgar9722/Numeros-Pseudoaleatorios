@@ -35,6 +35,8 @@ public class menuAleatoriasController implements Initializable {
             main.abrirEscena(event, "Archivo.fxml", archivoController, "Leer Archivo");
         });
         btnManualmente.setOnAction(event -> {
+            manualController manualController=new manualController();
+            main.abrirEscena(event,"manual.fxml",manualController,"Insertar numeros pseudoaleatorios");
         });
         btnDistribuciones.setOnAction(event -> {
             if (numeros.size()!=0) {
