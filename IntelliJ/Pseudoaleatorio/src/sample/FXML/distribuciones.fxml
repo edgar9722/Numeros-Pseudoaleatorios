@@ -2,13 +2,15 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="590.0" prefWidth="685.0" style="-fx-background-color: #9932CC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="590.0" prefWidth="685.0" style="-fx-background-color: #9932CC;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" prefHeight="39.0" prefWidth="685.0" style="-fx-background-color: #8B008B;" text="Distribuciones" textFill="WHITE">
          <font>
@@ -67,5 +69,12 @@
             <ToggleGroup fx:id="Grupos1" />
          </toggleGroup>
       </JFXRadioButton>
+      <JFXTextField fx:id="textA" labelFloat="true" layoutX="178.0" layoutY="106.0" promptText="punto a " unFocusColor="#f5f5f5">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </JFXTextField>
+      <JFXTextField />
+      <JFXTextField fx:id="textB" layoutX="178.0" layoutY="167.0" promptText="punto b" />
    </children>
 </AnchorPane>
