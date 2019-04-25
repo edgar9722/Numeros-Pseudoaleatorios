@@ -17,7 +17,6 @@ public class menuAleatoriasController implements Initializable {
     @FXML JFXButton btnCerrar;
     @FXML JFXButton btnArchivos;
     @FXML JFXButton btnManualmente;
-    @FXML JFXButton btnDistribuciones;
 
     Main main=new Main();
     LinkedList<Double> numeros=new LinkedList<>();
@@ -38,21 +37,5 @@ public class menuAleatoriasController implements Initializable {
             manualController manualController=new manualController();
             main.abrirEscena(event,"manual.fxml",manualController,"Insertar numeros pseudoaleatorios");
         });
-        btnDistribuciones.setOnAction(event -> {
-            if (numeros.size()!=0) {
-                distribucionesController distribucionesController = new distribucionesController(numeros);
-                main.abrirEscena(event, "distribuciones.fxml", distribucionesController, "Distribuciones");
-            }else {
-                Alert a = new Alert(Alert.AlertType.WARNING);
-                a.setContentText("Debe de generar numeros pseudoaleatorios antes de acceder");
-                a.setTitle("Atencion");
-                a.setHeaderText("Atencion");
-                a.showAndWait();
-            }
-        });
-    }
-
-    public void setNumeros(LinkedList<Double> num){
-        numeros=num;
     }
 }

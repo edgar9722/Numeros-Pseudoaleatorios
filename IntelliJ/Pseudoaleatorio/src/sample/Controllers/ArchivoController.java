@@ -26,6 +26,7 @@ public class ArchivoController implements Initializable {
     @FXML JFXRadioButton rdInicio; @FXML JFXRadioButton rdIntervalo; @FXML JFXRadioButton rdFinal;
     @FXML JFXTextField textInicio; @FXML JFXTextField textFin;
     @FXML JFXButton btnLeer;       @FXML JFXButton btnRegresar;      @FXML JFXButton btnCerrar;
+    @FXML JFXButton btnDistribuciones;
     @FXML Label lblCantidad;
 
     @FXML TableView<NumePseudoaleatorios> tbNumeros;
@@ -39,14 +40,8 @@ public class ArchivoController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         btnRegresar.setOnAction(event -> {
-            if (numeros.size()!=0){
-                menuAleatoriasController menuAleatoriasController = new menuAleatoriasController();
-                menuAleatoriasController.setNumeros(numeros);
-                main.abrirEscena(event, "menuAleatorias.fxml", menuAleatoriasController, "Menu Aleatorias");
-            }else {
-                menuAleatoriasController menuAleatoriasController = new menuAleatoriasController();
-                main.abrirEscena(event, "menuAleatorias.fxml", menuAleatoriasController, "Menu Aleatorias");
-            }
+            menuAleatoriasController menuAleatoriasController = new menuAleatoriasController();
+            main.abrirEscena(event, "menuAleatorias.fxml", menuAleatoriasController, "Menu Aleatorias");
         });
         btnCerrar.setOnAction(event -> {
             System.exit(0);
@@ -59,7 +54,7 @@ public class ArchivoController implements Initializable {
 
         rdInicio.setOnAction(event -> {
             opcion=1;
-            textInicio.setText("0");
+            textInicio.setText("1");
             textInicio.setPromptText("Inicio");
             textFin.setText("");
             textInicio.setPrefWidth(157);
@@ -92,18 +87,19 @@ public class ArchivoController implements Initializable {
                     }
                     break;
                 case 2:
-                    inicio=Integer.parseInt(textInicio.getText());
-                    fin=Integer.parseInt(textFin.getText());
-                    for (int i = inicio; i < fin; i++) {
+                    inicio=Integer.parseInt(textInicio.getText())+1;
+                    fin=Integer.parseInt(textFin.getText())+1;
+                    for (int i = inicio; i <= fin; i++) {
                         numeros.add(numeAll.get(i).getNumeroPseudoaleatorio());
                         nume.add(numeAll.get(i));
                     }
                     break;
                 case 3:
-                    inicio=Integer.parseInt(textInicio.getText());
-                    for (int i = inicio-1; i >= 0 ; i--) {
-                        numeros.add(numeAll.get(i).getNumeroPseudoaleatorio());
-                        nume.add(numeAll.get(i));
+                    inicio=numeAll.size()-1;
+                    for (int i = 0; i < 10 ; i++) {
+                        numeros.add(numeAll.get(inicio).getNumeroPseudoaleatorio());
+                        nume.add(numeAll.get(inicio));
+                        inicio--;
                     }
             }
             Alert a = new Alert(Alert.AlertType.INFORMATION);
@@ -111,7 +107,20 @@ public class ArchivoController implements Initializable {
             a.setTitle("Informacion");
             a.setHeaderText("¡Exito!");
             a.showAndWait();
+            lblCantidad.setText(""+nume.size());
             tbNumeros.setItems(nume);
+        });
+        btnDistribuciones.setOnAction(event -> {
+            if (numeros.size()!=0) {
+                distribucionesController distribucionesController = new distribucionesController(numeros,"Archivo");
+                main.abrirEscena(event, "distribuciones.fxml", distribucionesController, "Distribuciones");
+            }else {
+                Alert a = new Alert(Alert.AlertType.WARNING);
+                a.setContentText("Debe de generar numeros pseudoaleatorios antes de acceder");
+                a.setTitle("Atencion");
+                a.setHeaderText("Atencion");
+                a.showAndWait();
+            }
         });
     }
 

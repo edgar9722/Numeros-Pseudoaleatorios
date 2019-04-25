@@ -38,18 +38,19 @@ public class distribucionesController implements Initializable {
 
     LinkedList<Double> numeros;
     ObservableList<NumePseudoaleatorios> x= FXCollections.observableArrayList();
+    String clase;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         iniciar();
         clmX.setCellValueFactory(new PropertyValueFactory<NumePseudoaleatorios, Double>("numeroPseudoaleatorio"));
+
         btnRegresar.setOnAction(event -> {
-            if (numeros.size()!=0){
-                menuAleatoriasController menuAleatoriasController = new menuAleatoriasController();
-                menuAleatoriasController.setNumeros(numeros);
-                main.abrirEscena(event, "menuAleatorias.fxml", menuAleatoriasController, "Menu Aleatorias");
-            }else {
-                menuAleatoriasController menuAleatoriasController = new menuAleatoriasController();
-                main.abrirEscena(event, "menuAleatorias.fxml", menuAleatoriasController, "Menu Aleatorias");
+            if (clase.equals("Archivo")){
+                ArchivoController archivoController=new ArchivoController();
+                main.abrirEscena(event, "Archivo.fxml", archivoController, "Leer Archivo");
+            }else{
+                manualController manualController=new manualController();
+                main.abrirEscena(event, "manual.fxml", manualController, "Leer Manualmente");
             }
         });
         btnCerrar.setOnAction(event -> {
@@ -81,7 +82,7 @@ public class distribucionesController implements Initializable {
             rdComposicion.setVisible(false);
         });
         btnGenerarU.setOnAction(event -> {
-            Uniforme uniforme = new Uniforme(Integer.parseInt(textA.getText()),Integer.parseInt(textB.getText()),numeros);
+            uniforme = new Uniforme(Integer.parseInt(textA.getText()),Integer.parseInt(textB.getText()),numeros);
             numeros=uniforme.generar();
             for (int i = 0; i < numeros.size(); i++) {
                 x.add(new NumePseudoaleatorios(numeros.get(i)));
@@ -99,7 +100,8 @@ public class distribucionesController implements Initializable {
         lblInversa.setVisible(false);
     }
 
-    public distribucionesController(LinkedList<Double> numeros) {
+    public distribucionesController(LinkedList<Double> numeros, String clase) {
         this.numeros = numeros;
+        this.clase = clase;
     }
 }
