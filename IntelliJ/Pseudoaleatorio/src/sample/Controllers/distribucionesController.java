@@ -14,6 +14,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import sample.Distribuciones.Exponencial;
 import sample.Distribuciones.Uniforme;
 import sample.Main;
 import sample.Modelos.NumePseudoaleatorios;
@@ -61,7 +62,16 @@ public class distribucionesController implements Initializable {
             iniciar();
             rdTransformada.setVisible(false);
             rdComposicion.setVisible(false);
+
+            Exponencial exponencial = new Exponencial(numeros);
+            numeros=exponencial.generar();
+            for (int i = 0; i < numeros.size(); i++) {
+                x.add(new NumePseudoaleatorios(numeros.get(i)));
+            }
+            tbNumerosX.setItems(x);
         });
+
+
         btnUniforme.setOnAction(event -> {
             iniciar();
             rdTransformada.setVisible(false);
