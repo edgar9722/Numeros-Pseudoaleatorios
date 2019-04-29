@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="619.0" prefWidth="533.0" style="-fx-background-color: #778899;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="659.0" prefWidth="533.0" style="-fx-background-color: #778899;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" prefHeight="39.0" prefWidth="533.0" style="-fx-background-color: #2F4F4F;" text="Insertar numeros pseudoaleatorios" textFill="WHITE">
          <font>
@@ -31,7 +33,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <JFXButton fx:id="btnLeer" layoutX="36.0" layoutY="49.0" prefHeight="39.0" prefWidth="462.0" style="-fx-background-color: #2F4F4F;" text="Leer archivo" textFill="WHITE">
+      <JFXButton fx:id="btnLeer" layoutX="36.0" layoutY="121.0" prefHeight="39.0" prefWidth="462.0" style="-fx-background-color: #2F4F4F;" text="Leer archivo" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
@@ -39,13 +41,13 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
-      <TableView fx:id="tbNumeros" layoutX="39.0" layoutY="151.0" prefHeight="455.0" prefWidth="462.0">
+      <TableView fx:id="tbNumeros" layoutX="36.0" layoutY="220.0" prefHeight="425.0" prefWidth="462.0">
         <columns>
           <TableColumn fx:id="clmNumeros" prefWidth="437.0" style="-fx-alignment: CENTER;" text="Ri" />
         </columns>
       </TableView>
-      <Label fx:id="lblCantidad" alignment="CENTER_RIGHT" layoutX="439.0" layoutY="134.0" prefHeight="17.0" prefWidth="62.0" text="Cantidad" />
-      <JFXButton fx:id="btnDistribuciones" layoutX="36.0" layoutY="95.0" prefHeight="39.0" prefWidth="462.0" style="-fx-background-color: #2F4F4F;" text="Distribuciones" textFill="WHITE">
+      <Label fx:id="lblCantidad" alignment="CENTER_RIGHT" layoutX="436.0" layoutY="203.0" prefHeight="17.0" prefWidth="62.0" text="Cantidad" />
+      <JFXButton fx:id="btnDistribuciones" layoutX="36.0" layoutY="164.0" prefHeight="39.0" prefWidth="462.0" style="-fx-background-color: #2F4F4F;" text="Distribuciones" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
@@ -53,5 +55,14 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </JFXButton>
+      <JFXTextField fx:id="textNumero" alignment="CENTER" labelFloat="true" layoutX="39.0" layoutY="55.0" prefHeight="33.0" prefWidth="462.0" promptText="Insertar numero" unFocusColor="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </JFXTextField>
+      <JFXButton fx:id="btnAceptar" layoutX="226.0" layoutY="93.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #2F4F4F;" text="Aceptar" textFill="WHITE" />
    </children>
 </AnchorPane>

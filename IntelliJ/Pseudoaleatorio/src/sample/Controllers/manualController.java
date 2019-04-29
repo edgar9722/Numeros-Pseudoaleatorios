@@ -26,6 +26,8 @@ public class manualController implements Initializable {
     @FXML JFXButton btnRegresar; @FXML JFXButton btnCerrar;
     @FXML JFXButton btnLeer;
     @FXML JFXButton btnDistribuciones;
+    @FXML JFXButton btnAceptar;
+    @FXML JFXTextField textNumero;
     @FXML Label lblCantidad;
     @FXML TableView<NumePseudoaleatorios> tbNumeros;
     @FXML TableColumn clmNumeros;
@@ -42,6 +44,12 @@ public class manualController implements Initializable {
         });
         btnCerrar.setOnAction(event -> {
             System.exit(0);
+        });
+
+        btnAceptar.setOnAction(event -> {
+            num.add(new NumePseudoaleatorios(Double.parseDouble(textNumero.getText())));
+            numeros.add(Double.parseDouble(textNumero.getText()));
+            tbNumeros.setItems(num);
         });
 
         clmNumeros.setCellValueFactory(new PropertyValueFactory<NumePseudoaleatorios, Double>("numeroPseudoaleatorio"));

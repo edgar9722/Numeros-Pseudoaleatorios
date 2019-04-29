@@ -94,5 +94,14 @@
           <TableColumn fx:id="clmX" prefWidth="657.0" style="-fx-alignment: CENTER;" text="Xi" />
         </columns>
       </TableView>
+      <JFXTextField fx:id="lblLambda" alignment="CENTER" labelFloat="true" layoutX="13.0" layoutY="134.0" prefHeight="30.0" prefWidth="155.0" promptText="Lambda" unFocusColor="WHITE">
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnGenerarE" layoutX="53.0" layoutY="197.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #000000;" text="Generar" textFill="WHITE" />
    </children>
 </AnchorPane>

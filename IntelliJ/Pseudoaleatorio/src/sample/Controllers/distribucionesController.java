@@ -5,15 +5,13 @@ import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.ObservableListBase;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 import sample.Distribuciones.Exponencial;
 import sample.Distribuciones.Uniforme;
 import sample.Main;
@@ -28,8 +26,10 @@ public class distribucionesController implements Initializable {
     @FXML JFXButton btnUniforme; @FXML JFXButton btnTriangular; @FXML JFXButton btnGamma;
     @FXML JFXRadioButton rdTransformada; @FXML JFXRadioButton rdComposicion;
     @FXML JFXButton btnGenerarU;
+    @FXML JFXButton btnGenerarE;
     @FXML JFXTextField textA;
     @FXML JFXTextField textB;
+    @FXML JFXTextField lblLambda;
     @FXML Label lblInversa;
     @FXML TableView<NumePseudoaleatorios> tbNumerosX;
     @FXML TableColumn clmX;
@@ -62,15 +62,26 @@ public class distribucionesController implements Initializable {
             iniciar();
             rdTransformada.setVisible(false);
             rdComposicion.setVisible(false);
-
-            Exponencial exponencial = new Exponencial(numeros);
-            numeros=exponencial.generar();
-            for (int i = 0; i < numeros.size(); i++) {
-                x.add(new NumePseudoaleatorios(numeros.get(i)));
-            }
-            tbNumerosX.setItems(x);
+            btnGenerarE.setVisible(true);
+            lblLambda.setVisible(true);
         });
 
+        btnGenerarE.setOnAction(event -> {
+            if (lblLambda.getText().equals("")){
+                Alert a = new Alert(Alert.AlertType.INFORMATION);
+                a.setContentText("Alerta");
+                a.setTitle("Alerta");
+                a.setHeaderText("¡Debe de proporcionar LAMBDA!");
+                a.showAndWait();
+            }else {
+                Exponencial exponencial = new Exponencial(numeros, Double.parseDouble(lblLambda.getText()));
+                numeros = exponencial.generar();
+                for (int i = 0; i < numeros.size(); i++) {
+                    x.add(new NumePseudoaleatorios(numeros.get(i)));
+                }
+                tbNumerosX.setItems(x);
+            }
+        });
 
         btnUniforme.setOnAction(event -> {
             iniciar();
@@ -108,6 +119,8 @@ public class distribucionesController implements Initializable {
         textB.setVisible(false);
         btnGenerarU.setVisible(false);
         lblInversa.setVisible(false);
+        btnGenerarE.setVisible(false);
+        lblLambda.setVisible(false);
     }
 
     public distribucionesController(LinkedList<Double> numeros, String clase) {
