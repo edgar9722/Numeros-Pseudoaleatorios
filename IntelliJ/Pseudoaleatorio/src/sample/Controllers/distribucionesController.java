@@ -17,6 +17,7 @@ import sample.Distribuciones.TriangularInversa;
 import sample.Distribuciones.Uniforme;
 import sample.Main;
 import sample.Modelos.NumePseudoaleatorios;
+import sample.Pruebas.Chi_cuadrada;
 
 import java.net.URL;
 import java.util.LinkedList;
@@ -38,6 +39,7 @@ public class distribucionesController implements Initializable {
 
     Main main=new Main();
     Uniforme uniforme;
+    Chi_cuadrada chi_cuadrada=new Chi_cuadrada();
 
     LinkedList<Double> numeros;
     ObservableList<NumePseudoaleatorios> x= FXCollections.observableArrayList();
@@ -128,6 +130,7 @@ public class distribucionesController implements Initializable {
                     x.add(new NumePseudoaleatorios(num.get(i)));
                 }
                 tbNumerosX.setItems(x);
+                chi_cuadrada.disUniforme(num);
             }
         });
 
