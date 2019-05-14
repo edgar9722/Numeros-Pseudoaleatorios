@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="669.0" prefWidth="644.0" style="-fx-background-color: #9932CC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" prefHeight="39.0" prefWidth="644.0" style="-fx-background-color: #8B008B;" text="Distribuciones" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnRegresar" prefHeight="39.0" prefWidth="39.0" ripplerFill="SLATEBLUE" text="&lt;-" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCerrar" layoutX="604.0" prefHeight="21.0" prefWidth="39.0" ripplerFill="RED" style="-fx-background-color: #ff0000cc;" text="X" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnExponencial" layoutX="13.0" layoutY="50.0" prefHeight="39.0" prefWidth="460.0" style="-fx-background-color: #8B008B;" text="Exponencial" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUniforme" layoutX="13.0" layoutY="98.0" prefHeight="39.0" prefWidth="460.0" style="-fx-background-color: #8B008B;" text="Uniforme" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTriangular" layoutX="13.0" layoutY="148.0" prefHeight="39.0" prefWidth="460.0" style="-fx-background-color: #8B008B;" text="Triangular" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAceptacion" layoutX="13.0" layoutY="199.0" prefHeight="39.0" prefWidth="460.0" style="-fx-background-color: #8B008B;" text="Aceptacion o rechazo" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tbNumerosX" layoutX="488.0" layoutY="50.0" prefHeight="606.0" prefWidth="148.0">
+        <columns>
+          <TableColumn fx:id="clmX" prefWidth="139.0" style="-fx-alignment: CENTER;" text="Xi" />
+        </columns>
+      </TableView>
+      <Pane fx:id="pnExponencial" layoutX="13.0" layoutY="252.0" prefHeight="202.0" prefWidth="230.0" style="-fx-background-color: #8B008B;">
+         <children>
+            <JFXTextField fx:id="lblLambda" alignment="CENTER" labelFloat="true" layoutX="38.0" layoutY="57.0" prefHeight="30.0" prefWidth="155.0" promptText="Lambda" unFocusColor="WHITE">
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnGenerarE" layoutX="78.0" layoutY="120.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #000000;" text="Generar" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane fx:id="pnInversa" layoutX="243.0" layoutY="252.0" prefHeight="202.0" prefWidth="230.0" style="-fx-background-color: #8B008B;">
+         <children>
+            <JFXTextField fx:id="textA" alignment="CENTER" labelFloat="true" layoutX="38.0" layoutY="56.0" prefHeight="25.0" prefWidth="155.0" promptText="Punto a " unFocusColor="#f5f5f5">
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="textB" alignment="CENTER" labelFloat="true" layoutX="38.0" layoutY="117.0" prefHeight="25.0" prefWidth="155.0" promptText="Punto b" unFocusColor="WHITE">
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnGenerarU" layoutX="72.0" layoutY="161.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #000000;" text="Generar" textFill="WHITE" />
+            <Label fx:id="lblInversa" alignment="CENTER" layoutX="38.0" layoutY="16.0" prefHeight="25.0" prefWidth="155.0" text="Transformada inversa" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="13.0" layoutY="454.0" prefHeight="202.0" prefWidth="230.0" style="-fx-background-color: #8B008B;">
+         <children>
+            <JFXRadioButton fx:id="rdTransformada" layoutX="35.0" layoutY="14.0" text="Transformada inversa" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Grupos" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rdComposicion" layoutX="35.0" layoutY="46.0" text="Composicion" textFill="WHITE" toggleGroup="$Grupos">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXTextField fx:id="lblA" alignment="CENTER" labelFloat="true" layoutX="33.0" layoutY="108.0" prefHeight="25.0" prefWidth="48.0" promptText="A" unFocusColor="WHITE">
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </JFXTextField>
+            <JFXTextField fx:id="lblB" alignment="CENTER" labelFloat="true" layoutX="90.0" layoutY="108.0" prefHeight="25.0" prefWidth="48.0" promptText="B" unFocusColor="WHITE">
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </JFXTextField>
+            <JFXTextField fx:id="lblC" alignment="CENTER" labelFloat="true" layoutX="144.0" layoutY="108.0" prefHeight="25.0" prefWidth="48.0" promptText="C" unFocusColor="WHITE">
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </JFXTextField>
+            <JFXButton fx:id="btnGenerarTT" layoutX="67.0" layoutY="155.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #000000;" text="Generar" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="243.0" layoutY="454.0" prefHeight="202.0" prefWidth="230.0" style="-fx-background-color: #8B008B;" />
+   </children>
+</AnchorPane>
