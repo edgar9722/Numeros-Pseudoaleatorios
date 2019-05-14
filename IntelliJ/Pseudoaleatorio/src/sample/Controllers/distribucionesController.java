@@ -112,6 +112,18 @@ public class distribucionesController implements Initializable {
             }else {
                 uniforme = new Uniforme(Integer.parseInt(textA.getText()), Integer.parseInt(textB.getText()), numeros);
                 LinkedList<Double> num = uniforme.generar();
+                int size=x.size();
+                if (size!=0){
+                    for (int i = size-1; i >= 0; i--) {
+                        x.remove(i);
+                    }
+                }
+                size=tbNumerosX.getItems().size();
+                if (size!=0){
+                    for (int i = size-1; i >= 0; i--) {
+                        tbNumerosX.getItems().remove(i);
+                    }
+                }
                 for (int i = 0; i < num.size(); i++) {
                     x.add(new NumePseudoaleatorios(num.get(i)));
                 }
@@ -129,6 +141,18 @@ public class distribucionesController implements Initializable {
             }else {
                 Exponencial exponencial = new Exponencial(numeros, Double.parseDouble(lblLambda.getText()));
                 LinkedList<Double> num = exponencial.generar();
+                int size=x.size();
+                if (size!=0){
+                    for (int i = size-1; i >= 0; i--) {
+                        x.remove(i);
+                    }
+                }
+                size=tbNumerosX.getItems().size();
+                if (size!=0){
+                    for (int i = size-1; i >= 0; i--) {
+                        tbNumerosX.getItems().remove(i);
+                    }
+                }
                 for (int i = 0; i < num.size(); i++) {
                     x.add(new NumePseudoaleatorios(num.get(i)));
                 }
@@ -140,6 +164,18 @@ public class distribucionesController implements Initializable {
             if (rdTransformada.isSelected()) {
                 TriangularInversa triangularInversa = new TriangularInversa(Double.parseDouble(lblA.getText()), Double.parseDouble(lblB.getText()), Double.parseDouble(lblC.getText()), numeros);
                 LinkedList<Double> numeros = triangularInversa.transformadaInversa();
+                int size=x.size();
+                if (size!=0){
+                    for (int i = size-1; i >= 0; i--) {
+                        x.remove(i);
+                    }
+                }
+                size=tbNumerosX.getItems().size();
+                if (size!=0){
+                    for (int i = size-1; i >= 0; i--) {
+                        tbNumerosX.getItems().remove(i);
+                    }
+                }
                 for (int i = 0; i < numeros.size(); i++) {
                     x.add(new NumePseudoaleatorios(numeros.get(i)));
                 }
