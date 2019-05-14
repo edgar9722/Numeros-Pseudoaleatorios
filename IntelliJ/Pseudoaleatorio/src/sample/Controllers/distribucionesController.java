@@ -13,6 +13,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import sample.Distribuciones.Exponencial;
+import sample.Distribuciones.TriangularInversa;
 import sample.Distribuciones.Uniforme;
 import sample.Main;
 import sample.Modelos.NumePseudoaleatorios;
@@ -23,12 +24,13 @@ import java.util.ResourceBundle;
 
 public class distribucionesController implements Initializable {
     @FXML JFXButton btnRegresar; @FXML JFXButton btnCerrar;     @FXML JFXButton btnExponencial;
-    @FXML JFXButton btnUniforme; @FXML JFXButton btnTriangular; @FXML JFXButton btnGamma;
+    @FXML JFXButton btnUniforme; @FXML JFXButton btnTriangular; @FXML JFXButton btnAceptacion;
     @FXML JFXRadioButton rdTransformada; @FXML JFXRadioButton rdComposicion;
     @FXML JFXButton btnGenerarU;
-    @FXML JFXButton btnGenerarE;
+    @FXML JFXButton btnGenerarE, btnGenerarTT;
     @FXML JFXTextField textA;
     @FXML JFXTextField textB;
+    @FXML JFXTextField lblA, lblB, lblC;
     @FXML JFXTextField lblLambda;
     @FXML Label lblInversa;
     @FXML TableView<NumePseudoaleatorios> tbNumerosX;
@@ -54,6 +56,7 @@ public class distribucionesController implements Initializable {
                 main.abrirEscena(event, "manual.fxml", manualController, "Leer Manualmente");
             }
         });
+
         btnCerrar.setOnAction(event -> {
             System.exit(0);
         });
@@ -66,21 +69,18 @@ public class distribucionesController implements Initializable {
             lblLambda.setVisible(true);
         });
 
-        btnGenerarE.setOnAction(event -> {
-            if (lblLambda.getText().equals("")){
-                Alert a = new Alert(Alert.AlertType.INFORMATION);
-                a.setContentText("Alerta");
-                a.setTitle("Alerta");
-                a.setHeaderText("¡Debe de proporcionar LAMBDA!");
-                a.showAndWait();
-            }else {
-                Exponencial exponencial = new Exponencial(numeros, Double.parseDouble(lblLambda.getText()));
-                numeros = exponencial.generar();
-                for (int i = 0; i < numeros.size(); i++) {
-                    x.add(new NumePseudoaleatorios(numeros.get(i)));
-                }
-                tbNumerosX.setItems(x);
-            }
+        rdTransformada.setOnAction(event -> {
+            lblA.setVisible(true);
+            lblB.setVisible(true);
+            lblC.setVisible(true);
+            btnGenerarTT.setVisible(true);
+        });
+
+        rdComposicion.setOnAction(event -> {
+            lblA.setVisible(false);
+            lblB.setVisible(false);
+            lblC.setVisible(false);
+            btnGenerarTT.setVisible(false);
         });
 
         btnUniforme.setOnAction(event -> {
@@ -97,22 +97,66 @@ public class distribucionesController implements Initializable {
             rdTransformada.setVisible(true);
             rdComposicion.setVisible(true);
         });
-        btnGamma.setOnAction(event -> {
+        btnAceptacion.setOnAction(event -> {
             iniciar();
             rdTransformada.setVisible(false);
             rdComposicion.setVisible(false);
         });
         btnGenerarU.setOnAction(event -> {
-            uniforme = new Uniforme(Integer.parseInt(textA.getText()),Integer.parseInt(textB.getText()),numeros);
-            numeros=uniforme.generar();
-            for (int i = 0; i < numeros.size(); i++) {
-                x.add(new NumePseudoaleatorios(numeros.get(i)));
+            if (textA.getText().equals("")&&textB.getText().equals("")){
+                Alert a = new Alert(Alert.AlertType.INFORMATION);
+                a.setContentText("Alerta");
+                a.setTitle("Alerta");
+                a.setHeaderText("¡Debe de proporcionar LAMBDA!");
+                a.showAndWait();
+            }else {
+                uniforme = new Uniforme(Integer.parseInt(textA.getText()), Integer.parseInt(textB.getText()), numeros);
+                LinkedList<Double> num = uniforme.generar();
+                for (int i = 0; i < num.size(); i++) {
+                    x.add(new NumePseudoaleatorios(num.get(i)));
+                }
+                tbNumerosX.setItems(x);
             }
-            tbNumerosX.setItems(x);
+        });
+
+        btnGenerarE.setOnAction(event -> {
+            if (lblLambda.getText().equals("")){
+                Alert a = new Alert(Alert.AlertType.INFORMATION);
+                a.setContentText("Alerta");
+                a.setTitle("Alerta");
+                a.setHeaderText("¡Debe de proporcionar LAMBDA!");
+                a.showAndWait();
+            }else {
+                Exponencial exponencial = new Exponencial(numeros, Double.parseDouble(lblLambda.getText()));
+                LinkedList<Double> num = exponencial.generar();
+                for (int i = 0; i < num.size(); i++) {
+                    x.add(new NumePseudoaleatorios(num.get(i)));
+                }
+                tbNumerosX.setItems(x);
+            }
+        });
+
+        btnGenerarTT.setOnAction(event -> {
+            if (rdTransformada.isSelected()) {
+                TriangularInversa triangularInversa = new TriangularInversa(Double.parseDouble(lblA.getText()), Double.parseDouble(lblB.getText()), Double.parseDouble(lblC.getText()), numeros);
+                LinkedList<Double> numeros = triangularInversa.transformadaInversa();
+                for (int i = 0; i < numeros.size(); i++) {
+                    x.add(new NumePseudoaleatorios(numeros.get(i)));
+                }
+                tbNumerosX.setItems(x);
+            }else{
+
+            }
         });
     }
 
     public void iniciar(){
+        rdComposicion.setSelected(false);
+        rdTransformada.setSelected(false);
+        lblA.setVisible(false);
+        lblB.setVisible(false);
+        lblC.setVisible(false);
+        btnGenerarTT.setVisible(false);
         rdComposicion.setVisible(false);
         rdTransformada.setVisible(false);
         textA.setVisible(false);
