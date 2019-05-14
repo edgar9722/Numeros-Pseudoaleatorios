@@ -18,6 +18,7 @@ import sample.Distribuciones.Uniforme;
 import sample.Main;
 import sample.Modelos.NumePseudoaleatorios;
 import sample.Pruebas.Chi_cuadrada;
+import sample.Pruebas.KS;
 
 import java.net.URL;
 import java.util.LinkedList;
@@ -40,6 +41,7 @@ public class distribucionesController implements Initializable {
     Main main=new Main();
     Uniforme uniforme;
     Chi_cuadrada chi_cuadrada=new Chi_cuadrada();
+    KS ks = null;
 
     LinkedList<Double> numeros;
     ObservableList<NumePseudoaleatorios> x= FXCollections.observableArrayList();
@@ -160,13 +162,14 @@ public class distribucionesController implements Initializable {
                     x.add(new NumePseudoaleatorios(num.get(i)));
                 }
                 tbNumerosX.setItems(x);
+                ks=new KS(num);
             }
         });
 
         btnGenerarTT.setOnAction(event -> {
             if (rdTransformada.isSelected()) {
                 TriangularInversa triangularInversa = new TriangularInversa(Double.parseDouble(lblA.getText()), Double.parseDouble(lblB.getText()), Double.parseDouble(lblC.getText()), numeros);
-                LinkedList<Double> numeros = triangularInversa.transformadaInversa();
+                LinkedList<Double> num = triangularInversa.transformadaInversa();
                 int size=x.size();
                 if (size!=0){
                     for (int i = size-1; i >= 0; i--) {
@@ -179,14 +182,17 @@ public class distribucionesController implements Initializable {
                         tbNumerosX.getItems().remove(i);
                     }
                 }
-                for (int i = 0; i < numeros.size(); i++) {
-                    x.add(new NumePseudoaleatorios(numeros.get(i)));
+                for (int i = 0; i < num.size(); i++) {
+                    x.add(new NumePseudoaleatorios(num.get(i)));
                 }
                 tbNumerosX.setItems(x);
+                ks=new KS(num);
             }else{
 
             }
+
         });
+
     }
 
     public void iniciar(){
