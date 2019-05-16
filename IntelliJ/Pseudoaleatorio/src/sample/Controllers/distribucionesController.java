@@ -133,6 +133,7 @@ public class distribucionesController implements Initializable {
                 }
                 tbNumerosX.setItems(x);
                 chi_cuadrada.disUniforme(num);
+                chi_cuadrada.disPoisson(num);
             }
         });
 
@@ -163,6 +164,8 @@ public class distribucionesController implements Initializable {
                 }
                 tbNumerosX.setItems(x);
                 ks=new KS(num);
+                chi_cuadrada.disUniforme(num);
+                chi_cuadrada.disPoisson(num);
             }
         });
 
